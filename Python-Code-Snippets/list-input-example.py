@@ -14,3 +14,5 @@ if __name__ == '__main__':
 
   # Display the grades as a list after 4 grades entered
   print("The grades you entered are:", grades)
+
+  
