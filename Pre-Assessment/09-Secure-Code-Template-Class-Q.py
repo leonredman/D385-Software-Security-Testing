@@ -15,40 +15,6 @@ Hint: Python objects can access internal attributes, including a dictionary of g
 ---------------------------------------------------------------------------------
 """
 
-from string import Template
-
-CONFIG = {
-
-    "API_KEY": "'you've just exposed your secret_key'"
-}
-class User:
-
-    name = ""
-    email = ""
-
-    def __init__(self, name, email):
-
-        self.name = name
-        self.email = email
-
-    def __str__(self):
-
-        return self.name
-        
-if __name__ == '__main__':
-    name = input()
-    email = input()
-    
-    user = User(name, email)
-    
-    # FIXME:  Here is where you want to use the template class
-  #  print(f"The secret is {user.__init__.__globals__['CONFIG']['API_KEY']}")
-    
-<details>
-<summary>Show Answer</summary>
-
----
-
 # Import the Template class from the string module
 from string import Template 
 
@@ -93,6 +59,6 @@ if __name__ == '__main__':
 
     # Print the greeting message
     print(greeting)
-    </details>
+    
 
 
